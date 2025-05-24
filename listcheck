@@ -1,0 +1,11 @@
+#Framework for defining a list and checking active user input against list, launching a second script if input in list
+
+my_list = [10, 20, 30, 40, 50]
+
+user_input = int(input("Enter a number: "))
+
+if user_input in my_list:
+    print(f"{user_input} exists in the list.")
+    exec(open('web_search.py').read())
+else:
+    print(f"{user_input} does not exist in the list.")
